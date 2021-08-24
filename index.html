@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virtual Keyboard</title>
+        <style>
+            .keyboard{
+                margin: auto;
+                width: 80vw;
+                border: 2px solid black;
+                padding: 2rem;
+                background-color: darkgrey;
+            }
+            .firstRow, .thirdRow, .secondRow, .fourthRow, .fifthRow, .sixthRow{
+                display: flex;
+                margin: 0.5rem;
+                justify-content: space-between;
+            }
+            .key{
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(165, 162, 162);
+            }
+            .arrowkey{
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                border: 2px solid black;
+                border-radius: 5px;
+                padding:0.2rem 1.2rem;
+                width:1.1rem
+            }
+            .up{
+                border-radius: 5px 5px 0px 0px;
+            }
+            .down{
+                border-radius: 0px 0px 5px 5px;
+            }
+            .arrows{
+                display: flex ;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            .spacebar{
+                width: 20rem;
+            }
+            .shiftkey{
+                padding: 1rem 3rem;
+            }
+            .caps, .enter{
+                width: 4rem;   
+            }
+            .firstRow>.key{
+                height: 0.01rem;
+            }
+            .backspace{
+                padding: 1rem;
+            }
+            .tab{
+                width: 3rem;
+            }
+            .b{
+                width: 1.5rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='keyboard'>
+        <div class='firstRow'>
+            <div class='key' id='click'>esc</div>
+            <div class='key' id='click'>f1</div>
+            <div class='key' id='click'>f2</div>
+            <div class='key' id='click'>f3</div>
+            <div class='key' id='click'>f4</div>
+            <div class='key' id='click'>f5</div>
+            <div class='key' id='click'>f6</div>
+            <div class='key' id='click'>f7</div>
+            <div class='key' id='click'>f8</div>
+            <div class='key' id='click'>f9</div>
+            <div class='key' id='click'>f10</div>
+            <div class='key' id='click'>f11</div>
+            <div class='key' id='click'>f12</div>
+            <div class='key' id='click'>prt sc</div>
+            <div class='key' id='click'>insert</div>
+            <div class='key' id='click'>delete</div>
+            <div class='key' id='click'>power</div>
+        </div>
+
+        <div class='secondRow'>
+            <div class='key' id='click'>~`</div>
+            <div class='key b' id='click'>!1</div>
+            <div class='key b' id='click'>@2</div>
+            <div class='key b' id='click'>#3</div>
+            <div class='key b' id='click'>$4</div>
+            <div class='key b' id='click'>%5</div>
+            <div class='key b' id='click'>^6</div>
+            <div class='key b' id='click'>&7</div>
+            <div class='key b' id='click'>*8</div>
+            <div class='key b' id='click'>(9</div>
+            <div class='key b' id='click'>)0</div>
+            <div class='key b' id='click'>_-</div>
+            <div class='key b' id='click'>+=</div>
+            <div class='key backspace' id='click'>backspace</div>
+        </div>
+
+        <div class='thirdRow'>
+            <div class='key tab' id='click'>tab</div>
+            <div class='key b' id='click'>Q</div>
+            <div class='key b' id='click'>W</div>
+            <div class='key b' id='click'>E</div>
+            <div class='key b' id='click'>R</div>
+            <div class='key b' id='click'>T</div>
+            <div class='key b' id='click'>Y</div>
+            <div class='key b' id='click'>U</div>
+            <div class='key b' id='click'>I</div>
+            <div class='key b' id='click'>O</div>
+            <div class='key b' id='click'>P</div>
+            <div class='key b' id='click'>{[</div>
+            <div class='key b' id='click'>}]</div>
+            <div class='key' id='click'>|\</div>
+        </div>
+
+        <div class='fourthRow'>
+            <div class='key caps' id='click'>caps lock</div>
+            <div class='key b' id='click'>A</div>
+            <div class='key b' id='click'>S</div>
+            <div class='key b' id='click'>D</div>
+            <div class='key b' id='click'>F</div>
+            <div class='key b' id='click'>G</div>
+            <div class='key b' id='click'>H</div>
+            <div class='key b' id='click'>J</div>
+            <div class='key b' id='click'>K</div>
+            <div class='key b' id='click'>L</div>
+            <div class='key b' id='click'>:;</div>
+            <div class='key b' id='click'>"'</div>
+            <div class='key enter' id='click'>enter</div>
+        </div>
+        <div class='fifthRow'>
+            <div class='key shiftkey' id='click'>shift</div>
+            <div class='key b' id='click'>Z</div>
+            <div class='key b' id='click'>X</div>
+            <div class='key b' id='click'>C</div>
+            <div class='key b' id='click'>V</div>
+            <div class='key b' id='click'>B</div>
+            <div class='key b' id='click'>N</div>
+            <div class='key b' id='click'>M</div>
+            <div class='key b' id='click'><,</div>
+            <div class='key b' id='click'>>.</div>
+            <div class='key b' id='click'>?/</div>
+            <div class='key shiftkey' id='click'>shift</div>
+        </div>
+        <div class='sixthRow'>
+            <div class='key b' id='click'>ctrl</div>
+            <div class='key b' id='click'>fn</div>
+            <div class='key b' id='click'>win</div>
+            <div class='key b' id='click'>alt</div>
+            <div class='key spacebar' id='click'></div>
+            <div class='key b' id='click'>alt</div>
+            <div class='key b' id='click'>ctrl</div>
+            <div class='arrows'>
+                <div class=' arrowkey' id='click'><</div>
+            </div>
+            <div>
+                <div class=' arrowkey up' id='click'>^</div>
+                <div class=' arrowkey down' id='click'>v</div>
+            </div>
+            <div class='arrows'>
+                <div class=' arrowkey' id='click'>></div>
+            </div>
+        </div>
+        </div>
+        <script>
+            const keys = document.querySelectorAll('#click')
+            console.log(keys)
+            
+        </script>
+    </body>
+</html>
